@@ -1,0 +1,72 @@
+body {
+  background-color: rgb(255, 254, 253);
+}
+main {
+  background-color: rgb(67, 120, 221);
+  padding: 20px;
+  border-radius: 10px;
+  width: 600px;
+  margin: auto;
+  text-align: center;
+  color: rgb(3, 17, 61);
+  margin-top: 10rem;
+}
+#webform {
+  background-color: rgb(184, 125, 230);
+}
+
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin-top: 50px;
+}
+
+#output {
+  margin-top: 20px;
+  font-size: 24px;
+  font-weight: bold;
+}
+.too-high {
+  background-color: red;
+  background-image: url("./img/stop.gif");
+}
+
+/* Fejrings-animation */
+.celebrate {
+  animation: flash 50s infinite;
+}
+.celebrate {
+  background-image: url("./img/glad.gif"), url("./img/glad.gif"), url("./img/glad.gif"), url("./img/glad.gif"), url("./img/glad.gif");
+
+  background-repeat: repeat-y, repeat-y, repeat-y;
+
+  background-size: 150px, 260px, 150px, 260px, 150px;
+
+  background-position:
+    10% -200px,
+    50% -400px,
+    85% -600px,
+    95% -700px,
+    30% -800px;
+
+  animation: rain 6s linear infinite;
+}
+
+@keyframes moving {
+  from {
+    background-position: 0 -200px; /* starter over boksen */
+  }
+  to {
+    background-position: 0 100%; /* slutter i bunden */
+  }
+}
+@keyframes rain {
+  to {
+    background-position:
+      10% 100%,
+      50% 100%,
+      30% 100%,
+      80% 100%,
+      100% 100%;
+  }
+}
