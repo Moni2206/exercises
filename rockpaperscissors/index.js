@@ -18,16 +18,16 @@ const drawMsg = document.querySelector("#draw");
 let userChoice;
 let computerResult;
 
-/*variabler til at gemme valg*/
+// variabler til at gemme valg
 document.addEventListener("DOMContentLoaded", init);
 
-/*venter på at DOM er loaded, før init køres*/
+// venter på at DOM er loaded, før init køres
 function init() {
   rock_btn.addEventListener("click", rockClick);
   paper_btn.addEventListener("click", paperClick);
   scissors_btn.addEventListener("click", scissorsClick);
 }
-/*eventlisteners til knapperne*/
+// eventlisteners til knapperne
 function rockClick() {
   userChoice = "rock";
   playGame();
@@ -42,7 +42,7 @@ function scissorsClick() {
   userChoice = "scissors";
   playGame();
 }
-/*funktioner til hver knap, der sætter userChoice og kalder playGame*/
+// funktioner til hver knap, der sætter userChoice og kalder playGame
 function getComputerChoice() {
   const choices = ["rock", "paper", "scissors"];
   const randomIndex = Math.floor(Math.random() * 3);
@@ -50,7 +50,7 @@ function getComputerChoice() {
 }
 
 function playGame() {
-  /*Deaktiver knapperne under animationen*/
+  //   Deaktiver knapperne under animationen
   buttons.classList.add("disabled");
   rock_btn.disabled = true;
   paper_btn.disabled = true;
