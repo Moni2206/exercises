@@ -10,7 +10,7 @@ const player2 = document.querySelector("#player2");
 
 const buttons = document.querySelector("#buttons");
 
-/*henter de to “hænder”, der skal vise valgene*/
+/*vinder vise */
 const winMsg = document.querySelector("#win");
 const loseMsg = document.querySelector("#lose");
 const drawMsg = document.querySelector("#draw");
@@ -27,7 +27,7 @@ function init() {
   paper_btn.addEventListener("click", paperClick);
   scissors_btn.addEventListener("click", scissorsClick);
 }
-// eventlisteners til knapperne
+
 function rockClick() {
   userChoice = "rock";
   playGame();
