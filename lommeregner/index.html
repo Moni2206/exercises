@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="da">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Regnemaskine</title>
+
+    <script type="module" src="index.js"></script>
+  </head>
+
+  <body>
+    <main>
+      <h2>1. Tal</h2>
+      <input id="tal1" type="text" />
+
+      <h2>Vælg regneart</h2>
+      <select id="regneart">
+        <option value="">Vælg regneart</option>
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">*</option>
+        <option value="/">/</option>
+      </select>
+
+      <h2>2. Tal</h2>
+      <input id="tal2" type="text" />
+
+      <br /><br />
+
+      <button id="beregn">Beregn</button>
+
+      <h2>Resultat</h2>
+      <div id="output">—</div>
+    </main>
+  </body>
+</html>

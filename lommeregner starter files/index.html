@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="da">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Lommeregner (HTML + CSS)</title>
+    <link rel="stylesheet" href="style.css" />
+
+    <script type="module" src="index.js"></script>
+  </head>
+  <body>
+    <main class="calc" aria-label="Lommeregner">
+      <header class="calc__top">
+        <p class="calc__title">Lommeregner</p>
+
+        <!-- Kun UI: JS kan senere skrive til value -->
+        <input class="display" type="text" inputmode="decimal" value="0" aria-label="Display" readonly />
+
+        <div class="hint" aria-hidden="true">
+          <span>HTML + CSS</span>
+          <span>klar til JS</span>
+        </div>
+      </header>
+
+      <section class="keys" aria-label="Taster">
+        <button class="key key--danger" type="button" data-func="ac">AC</button>
+        <button class="key key--danger" type="button" data-func="del" disabled>DEL</button>
+        <button class="key key--op" type="button" data-func="percent" disabled>%</button>
+        <button class="key key--op" type="button" data-func="/">÷</button>
+
+        <button class="key" type="button" data-func="7">7</button>
+        <button class="key" type="button" data-func="8">8</button>
+        <button class="key" type="button" data-func="9">9</button>
+        <button class="key key--op" type="button" data-func="*">×</button>
+
+        <button class="key" type="button" data-func="4">4</button>
+        <button class="key" type="button" data-func="5">5</button>
+        <button class="key" type="button" data-func="6">6</button>
+        <button class="key key--op" type="button" data-func="-">−</button>
+
+        <button class="key" type="button" data-func="1">1</button>
+        <button class="key" type="button" data-func="2">2</button>
+        <button class="key" type="button" data-func="3">3</button>
+        <button class="key key--op" type="button" data-func="+">+</button>
+
+        <button class="key key--wide" type="button" data-func="0">0</button>
+        <button class="key" type="button" data-func="." disabled>.</button>
+        <button class="key key--equal" type="button" data-func="=">=</button>
+      </section>
+    </main>
+  </body>
+</html>
