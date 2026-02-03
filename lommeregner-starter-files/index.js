@@ -20,17 +20,52 @@ function klik(evt) {
   updateScreen(btnClicked);
   // hvilken salgs input er det: "num" "regneart" "ligmed" "CLEAR"
   typeOfInput = whatTypeOfInput(btnClicked);
-  console.log("typeOfInput:", typeOfInput);
+  // console.log("typeOfInput:", typeOfInput);
+
   if (typeOfInput === "num") {
+    if (regneArt === "") {
+      firstNumVal += btnClicked;
+    } else {
+      secondNumVal += btnClicked;
+    }
+
+    // console.log("first:", firstNumVal);
+    // console.log("second:", secondNumVal);
+
     // hvis det er et tal, så tjek om det er første eller andet tal der skal gemmes(!) og husk at tallene er strings
     // og det er en fordel her, men ikke nå der skal regnes
   } else if (typeOfInput === "regneart") {
+    regneArt = btnClicked;
+
+    // console.log("regneArt:", regneArt);
     // hvis det er en regneart, så gem den
   } else if (typeOfInput === "ligmed") {
+    const num1 = Number(firstNumVal);
+    const num2 = Number(secondNumVal);
+
+    let result = 0;
+
+    if (regneArt === "+") {
+      result = num1 + num2;
+    } else if (regneArt === "-") {
+      result = num1 - num2;
+    } else if (regneArt === "*") {
+      result = num1 * num2;
+    } else if (regneArt === "/") {
+      result = num1 / num2;
+    }
+
+    resetScreen(); // ryd skærmen
+    display.value = result; // vis resultat
+
     // hvis det er ligmed, så regn regnestykket ud med de gemte værdier
     // ligesom i den simple lommeregner.  Der skal parseInt() på strings til tal
     // skriv resultatet til skærmen med updateScreen()
   } else if (typeOfInput === "CLEAR") {
+    firstNumVal = "";
+    secondNumVal = "";
+    regneArt = "";
+    resetScreen();
     // reset alt: lav en reset funktion der nulstiller alle variabler
     // skærmen bliver nulstillet med resetScreen()
     resetScreen();
@@ -38,18 +73,7 @@ function klik(evt) {
 }
 
 function whatTypeOfInput(btnClicked) {
-  if (
-    btnClicked === "0" ||
-    btnClicked === "1" ||
-    btnClicked === "2" ||
-    btnClicked === "3" ||
-    btnClicked === "4" ||
-    btnClicked === "5" ||
-    btnClicked === "6" ||
-    btnClicked === "7" ||
-    btnClicked === "8" ||
-    btnClicked === "9"
-  ) {
+  if (btnClicked === "0" || btnClicked === "1" || btnClicked === "2" || btnClicked === "3" || btnClicked === "4" || btnClicked === "5" || btnClicked === "6" || btnClicked === "7" || btnClicked === "8" || btnClicked === "9") {
     return "num";
   } else if (btnClicked === "+" || btnClicked === "/" || btnClicked === "*" || btnClicked === "-") {
     return "regneart";
