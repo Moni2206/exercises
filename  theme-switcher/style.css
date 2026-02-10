@@ -1,0 +1,35 @@
+/* Standard styling der bruger variablerne */
+header {
+  background: var(--header-bg-col);
+  color: var(--text-col);
+  border-bottom: 4px solid var(--border-col);
+  padding: 2rem;
+}
+
+main {
+  color: var(--text-col);
+}
+
+body[data-theme="light"] {
+  --header-bg-col: linear-gradient(90deg, rgb(192, 184, 240), rgb(179, 178, 181), rgb(243, 242, 156), rgb(158, 194, 232), rgb(203, 238, 202));
+  --text-col: rgb(65, 62, 62);
+  --border-col: rgb(255, 225, 0);
+
+}
+
+/* 🌑 Dark theme */
+body[data-theme="dark"] {
+  --header-bg-col: #222;
+  --text-col: #f1f1f1;
+  --border-col: #555;
+  background: #111;
+}
+
+/* 🌌 Universe theme (nyt theme med flere styles) */
+body[data-theme="universe"] {
+  --header-bg-col: radial-gradient(circle, #b162ed, #721fb2, #0a53db, #300b87, #000000);
+  --text-col: white;
+  --border-col: rgb(0, 145, 255);
+  background-image: url("../\ theme-switcher/star.gif");
+  background-size: cover;
+}
