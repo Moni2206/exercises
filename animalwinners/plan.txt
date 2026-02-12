@@ -1,0 +1,13 @@
+winner
+- 1 model 
+-- add winner status to animal
+-2 view
+-- add visible winners (fixed values in the list)
+-- get the winner status from tge model, and display that in the list 
+-3 controller 
+-- (fake winner ): add toggle button to make each animal a winner or not
+-- design the logic for the rules..
+-- implement the logic  wiht lots og basiv functions 
+-- add user interface to logic:
+-4 viwe: herdcoded dialog boxes
+-- dyamic dialog boxes

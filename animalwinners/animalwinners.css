@@ -1,0 +1,70 @@
+[data-action] {
+  cursor: pointer;
+}
+
+#sorting th.sortby {
+  text-decoration: underline;
+}
+#sorting th.sortby[data-sort-direction="asc"]::after {
+  content: "▲";
+}
+#sorting th.sortby[data-sort-direction="desc"]::after {
+  content: "▼";
+}
+
+#list {
+  border-collapse: collapse;
+}
+
+#list tbody tr td {
+  padding: 4px;
+}
+
+#list tbody tr:nth-child(odd) td {
+  background-color: lightblue;
+  border-right: rgb(240, 249, 255) 1px dotted;
+}
+
+#list tbody tr:nth-child(even) td {
+  border-right: rgb(171, 219, 252) 1px dotted;
+}
+
+td[data-field="winner"]::after {
+  content: "🏆";
+}
+td[data-field="winner"][data-winner="false"]::after {
+  filter: grayscale(1);
+}
+.hide {
+  visibility: hidden;
+}
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 38vw;
+  height: 43vh;
+  color: #000000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.modal {
+  box-shadow: 1px 1px 10px #333;
+  border-radius: 12px;
+  padding: 2em;
+  background-color: #ebc89e;
+  position: relative;
+}
+button.closebutton {
+  position: absolute;
+  top: -1em;
+  right: -1em;
+  border-radius: 50%;
+  width: 4em;
+  height: 4em;
+}
+
+.modal h1 {
+  margin-top: 0;
+}
