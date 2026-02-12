@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pointer Move</title>
+    <link rel="stylesheet" href="css.css" />
+  </head>
+  <body>
+    <script>
+      window.addEventListener("mousemove", function (e) {
+        let x = (e.clientX / window.innerWidth) * 100;
+        let y = (e.clientY / window.innerHeight) * 100;
+        document.documentElement.style.setProperty("--lightness", x + "%");
+        document.documentElement.style.setProperty("--saturation", y + "%");
+      });
+    </script>
+  </body>
+</html>
