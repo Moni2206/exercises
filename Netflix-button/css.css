@@ -1,0 +1,121 @@
+:root {
+  --netflix-blue: #32c5ee;
+  --btn-height: 56px;
+}
+
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family:
+    system-ui,
+    -apple-system,
+    "Segoe UI",
+    Roboto,
+    "Helvetica Neue",
+    Arial;
+  background: #111;
+  color: #fff;
+}
+
+.wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: center;
+}
+
+button {
+  font-size: 1rem;
+  border: none;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+}
+
+#menu {
+  background: #333;
+  color: #fff;
+  padding: 0.45em 0.9em;
+  border-radius: 8px;
+}
+
+.netflix-btn {
+  position: relative;
+  overflow: hidden;
+  width: 260px;
+  height: var(--btn-height);
+  background: var(--netflix-blue);
+  color: #fff;
+  border-radius: 6px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 1rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.netflix-btn .label {
+  position: relative;
+  z-index: 2;
+}
+.netflix-btn .progress {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 0%;
+  background: rgba(0, 0, 0, 0.35);
+  z-index: 1;
+  transition: width 0.25s linear;
+}
+
+.netflix-btn:active {
+  transform: scale(0.99);
+}
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.75);
+  color: #fff;
+  font-size: 1.6rem;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s ease;
+}
+.overlay.visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* final page look after action */
+body.next {
+  background: #000;
+  color: #eee;
+}
+
+.note {
+  font-size: 0.9rem;
+  color: #ddd;
+  margin-top: 8px;
+}
+
+/* small responsive */
+@media (max-width: 380px) {
+  .netflix-btn {
+    width: 200px;
+  }
+}
