@@ -15,13 +15,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family:
-    system-ui,
-    -apple-system,
-    "Segoe UI",
-    Roboto,
-    "Helvetica Neue",
-    Arial;
+
   background: #111;
   color: #fff;
 }
